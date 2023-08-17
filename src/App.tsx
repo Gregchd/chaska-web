@@ -1,7 +1,12 @@
-// import { useState } from "react";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Root } from "./routes/";
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  // Create a router
+  const router = createBrowserRouter([
+    // Define routes
+    { path: "/", element: <Root /> },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
